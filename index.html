@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frieren & Himmel Theme Profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Unbounded', cursive;
+      background: url('https://files.catbox.moe/op9x94.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-y: auto;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 20px 100px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .buttons a {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background: #ffffff33;
+    }
+
+    .audio-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px;
+      background: #25D366;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .audio-btn:hover {
+      opacity: 0.8;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #time {
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      margin-bottom: 15px;
+    }
+
+    .story {
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .watermark {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://files.catbox.moe/pmgosg.jpg" alt="PP" />
+      <h1>Cuki Digital</h1>
+      <p>Hanya anak smp yg masih belajar coding</p>
+      <div class="buttons">
+        <a href="https://wa.me/+573238329287" target="_blank">Chat di WhatsApp</a>
+        <a href="https://whatsapp.com/channel/0029Vb2qri6JkK72MIrI8F1Z" target="_blank">Lihat Saluran WA</a>
+        <a href="https://chat.whatsapp.com/IPhNxvkkbvBGNjLI32RXcT" target="_blank">Masuk Grup Bot</a>
+      </div>
+      <a href="javascript:void(0)" class="audio-btn" onclick="toggleAudio()">Play / Pause Lagu</a>
+      <audio id="background-audio" src="https://files.catbox.moe/zxb6ch.mp3" preload="auto"></audio>
+    </div>
+
+    <div class="footer">
+      <div id="time">00:00:00</div>
+    </div>
+
+    <div class="story">
+      <h3>Tentang Cuki</h3>
+      <p>
+        Cuki Digital adalah anak SMP yang baru belajar ngoding, tapi semangatnya kayak Himmel menghadapi Raja Iblis. Dari ngulik HTML sampai bikin bot WhatsApp, semua dilahap demi jadi dev yang berguna buat semua orang. Seperti Frieren yang keliling dunia buat memahami manusia, Cuki juga keliling Google, GitHub, dan StackOverflow buat paham sintaks yang bikin error.
+      </p>
+      <p>
+        Bantu dukung perjalanan ini, siapa tahu besok udah jadi creator OS sendiri atau pengganti Google. Tapi sekarang, cukup tahu dulu kalau Cuki itu nama yang harus lo inget. Sekian, salam digital!
+      </p>
+    </div>
+
+    <div class="watermark">© cuki - digital 2025</div>
+  </div>
+
+  <script>
+    let audio = document.getElementById("background-audio");
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    function updateTime() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById('time').textContent = time;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
